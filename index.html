@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/6fd8217433.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ToDos</title>
+  </head>
+  <body class="w-screen h-screen bg-gray-600 overflow-y-hidden">
+    <h1
+      class="text-gray-300 text-3xl font-serif border-b-4 text-center border-yellow-300 md:text-4xl mb-12 mt-16"
+    >
+      Task List
+    </h1>
+    <!-- PreLoader -->
+    <section
+      class="hidden flex flex-col justify-center items-center w-screen h-screen bg-[#E5EFF1] md:flex-row"
+      id="preLoader"
+    >
+      <img src="./assets/preLoader.gif" class="w-36 md:w-72" alt="Preloader" />
+    </section>
+    <!-- ToDos Section -->
+    <form>
+      <section
+        class="relative flex flex-col space-y-[30px] justify-center items-center"
+      >
+        <!-- Add Todos -->
+        <div
+          class="flex justify-center items-center bg-gray-800 w-[450px] h-[80px] space-x-16 shadow-2xl shadow-blue-900 rounded-2xl md:w-[650px] md:h-[120px] hover:scale-95 duration-1000"
+        >
+          <input
+            type="text"
+            class="outline-none w-[250px] h-[40px] rounded-2xl shadow-2xl font-serif shadow-blue-800 md:w-[320px] md:h-[60px] md:text-2xl placeholder:text-center placeholder:text-gray-800 md:placeholder:text-xl hover:scale-105 duration-500"
+            placeholder="Enter your Todos"
+            id="input"
+            required
+          />
+          <button
+            class="text-gray-800 fon-serif bg-white px-8 py-2 rounded-2xl hover:scale-105 duration-500 md:px-[50px] md:py-[15px] md:text-xl"
+            id="btn"
+          >
+            Add
+          </button>
+        </div>
+        <!-- Close Todo's -->
+
+        <!-- notification alert  -->
+        <div
+          class="hidden absolute right-[-10px] top-[-180px] w-[250px] h-[50px] space-x-16 shadow-2xl shadow-blue-900 rounded-2xl duration-500"
+          id="alert"
+        >
+          <h3
+            class="font-serif text-gray-100 text-xl tracking-widest mt-2 ml-2"
+          >
+            <span id="messages" class=""></span>
+          </h3>
+        </div>
+
+        <!-- ToDo's List -->
+        <div class="flex flex-col space-y-2">
+          <div
+            class="flex justify-between items-center bg-gray-800 w-[450px] h-[60px] shadow-2xl shadow-blue-900 rounded-2xl md:w-[650px] mb-2 hover:bg-gray-700 duration-500"
+          >
+            <h2 class="text-white font-serif text-2xl tracking-widest ml-4">
+              Eggs
+            </h2>
+            <div id="operation" class="text-white">
+              <i
+                class="fa-xl fa-solid fa-pen-to-square mr-2 cursor-pointer text-green-600 hover:text-green-800 duration-500 md:fa-2xl"
+                id="edit"
+              ></i>
+
+              <i
+                class="fa-xl fa-solid fa-trash mr-4 cursor-pointer text-red-600 hover:text-red-800 duration-500 md:mr-8 md:fa-2xl"
+                id="delete"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
