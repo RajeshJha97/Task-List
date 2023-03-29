@@ -12,7 +12,7 @@
     ></script>
     <title>ToDos</title>
   </head>
-  <body class="w-screen h-screen bg-gray-600 overflow-y-hidden">
+  <body class="w-screen h-screen bg-gray-600 overflow-x-hidden">
     <h1
       class="text-gray-300 text-3xl font-serif border-b-4 text-center border-yellow-300 md:text-4xl mb-12 mt-16"
     >
@@ -63,26 +63,7 @@
         </div>
 
         <!-- ToDo's List -->
-        <div class="flex flex-col space-y-2">
-          <div
-            class="flex justify-between items-center bg-gray-800 w-[380px] h-[60px] shadow-2xl shadow-blue-900 rounded-2xl md:w-[650px] mb-2 hover:bg-gray-700 duration-500"
-          >
-            <h2 class="text-white font-serif text-2xl tracking-widest ml-4">
-              Eggs
-            </h2>
-            <div id="operation" class="text-white">
-              <i
-                class="fa-xl fa-solid fa-pen-to-square mr-2 cursor-pointer text-green-600 hover:text-green-800 duration-500 md:fa-2xl"
-                id="edit"
-              ></i>
-
-              <i
-                class="fa-xl fa-solid fa-trash mr-4 cursor-pointer text-red-600 hover:text-red-800 duration-500 md:mr-8 md:fa-2xl"
-                id="delete"
-              ></i>
-            </div>
-          </div>
-        </div>
+        <div class="flex flex-col space-y-2" id="list"></div>
       </section>
     </form>
 
